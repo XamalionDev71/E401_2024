@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Gift Store</string>
+    <string name="texto01">Welcome!!</string>
+    <string name="texto02">Ingresar</string>
+    <string name="texto03">Olvidaste tu contraseña?</string>
+    <string name="texto04">¡¡No estoy Registrado!!</string>
+    <string name="texto05">Correo Electrónico</string>
+    <string name="texto06">Contraseña</string>
+    <string name="texto07">Nuevo Usuario</string>
+    <string name="texto08">Nombre(s)</string>
+    <string name="texto09">Apellido Paterno</string>
+    <string name="texto10">Apellido Materno</string>
+    <string name="texto11">Registrarse</string>
+    <string name="texto12">Ya estoy Registrado</string>
+    <string name="texto13">Datos del Usuario</string>
+    <string name="texto14">Tienda</string>
+    <string name="texto15">Salir</string>
+
+    <string name="cb_cliente">Cliente</string>
+    <string name="cb_administrador">Administrador</string>
+
+    <string name="boton01">Agregar Producto</string>
+    <string name="boton02">Regresar</string>
+
+    <string name="admin01">Listado de Productos</string>
+    <string name="admin02">Agregar Producto</string>
+    <string name="admin03">Foto del Producto</string>
+
+    <string name="hint11">Nombre Corto</string>
+    <string name="hint12">Nombre Completo</string>
+    <string name="hint13">Descripción</string>
+    <string name="hint14">Categoria</string>
+    <string name="hint15">Precio</string>
+
+    <string-array name="categoria_producto">
+        <item>Artesanía</item>
+        <item>Perfume</item>
+        <item>Bolso</item>
+        <item>Pulsera</item>
+        <item>Otros</item>
+    </string-array>
+
+    <string name="card01">Nombre del Producto</string>
+    <string name="card02">Descripción</string>
+    <string name="card03">Categoría</string>
+    <string name="card04">$ 9,999.99</string>
+
+</resources>
+

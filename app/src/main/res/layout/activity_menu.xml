@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".Menu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/texto13"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnTienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#2196F3"
+            android:text="@string/texto14"
+            android:textAllCaps="true"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnSalir_Menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="#F44336"
+            android:text="@string/texto15"
+            android:textAllCaps="true"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</ScrollView>
+

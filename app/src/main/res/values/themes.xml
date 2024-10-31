@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.E401_2024" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.E401_2024" parent="Base.Theme.E401_2024" />
+
+    <style name="Titulo01">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/azul_1B</item>
+    </style>
+
+    <style name="Titulo02">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/rojo_88</item>
+    </style>
+
+    <style name="Titulo03">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/azul_1B</item>
+    </style>
+
+    <style name="Texto01">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/gris_5E</item>
+    </style>
+
+    <style name="Texto02">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/gris_5E</item>
+    </style>
+
+    <style name="Precio01">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/azul_1B</item>
+    </style>
+
+    <style name="Boton01">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:radius">0dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Boton02">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:radius">0dp</item>
+        <item name="android:textColor">@color/gris_5E</item>
+    </style>
+
+    <style name="Checkbox">
+        <item name="android:textColor">@color/rojo_88</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>
