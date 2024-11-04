@@ -1,8 +1,10 @@
 package mx.tecnm.cdhidalgo.e401_2024.Admin
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.OpenableColumns
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
@@ -14,6 +16,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -77,6 +80,7 @@ class AdminAgregarProducto : AppCompatActivity() {
         }
 
         btnAgregarProducto.setOnClickListener {
+            Toast.makeText(this, "$selectedImageUri", Toast.LENGTH_SHORT).show()
             //Aseguramos que exista una imagen seleccionada
             if (selectedImageUri != null) {
                 //Guardamos la imagen en Firebase Storage
@@ -120,6 +124,34 @@ class AdminAgregarProducto : AppCompatActivity() {
             intent.putExtra("usuario",usuario)
             startActivity(intent)
             finish()
+        }
+    }
+
+    // Método para manejar la selección de imágenes desde la galería
+    @SuppressLint("Range")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            data?.data?.let { uri ->
+                // Almacena la URI seleccionada
+                selectedImageUri = uri
+                // Obtiene el nombre del archivo de la URI
+                val cursor = contentResolver.query(uri, null,
+                    null, null, null)
+                cursor?.use {
+                    if (it.moveToFirst()) {
+                        val displayName =
+                            it.getString(it.getColumnIndex(OpenableColumns.DISPLAY_NAME))
+                        // Muestra el nombre del archivo en un TextView
+                        nombreFoto.text = "Foto del Producto: $displayName"
+                        // Muestra la imagen en un ImageView
+                        Glide.with(this)
+                            .load(selectedImageUri)
+                            .override(200,200)
+                            .into(foto)
+                    }
+                }
+            }
         }
     }
 }

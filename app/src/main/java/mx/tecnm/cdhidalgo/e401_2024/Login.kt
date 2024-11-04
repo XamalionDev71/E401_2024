@@ -64,12 +64,6 @@ class Login : AppCompatActivity() {
                                 .document(_correo)
                                 .get()
                                 .addOnSuccessListener { documento ->
-//                                    val _usuario = Usuario(
-//                                        _correo,
-//                                        documento.getString("nombre"),
-//                                        documento.getString("apaterno"),
-//                                        documento.getString("amaterno")
-//                                    )
                                     val _usuario = documento.toObject(Usuario::class.java)!!
 
                                     if (_usuario != null) {
