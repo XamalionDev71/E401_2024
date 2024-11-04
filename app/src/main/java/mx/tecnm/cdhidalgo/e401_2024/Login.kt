@@ -16,7 +16,12 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.toObject
 import com.google.firebase.ktx.Firebase
 import mx.tecnm.cdhidalgo.e401_2024.Admin.AdminPrincipal
+import mx.tecnm.cdhidalgo.e401_2024.Data_Class.Producto
 import mx.tecnm.cdhidalgo.e401_2024.Data_Class.Usuario
+
+var listaProductos = ArrayList<Producto>()
+var miCarrito = ArrayList<Producto>()
+var misCompras = ArrayList<Producto>()
 
 class Login : AppCompatActivity() {
 
