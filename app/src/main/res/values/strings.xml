@@ -15,6 +15,8 @@
     <string name="texto13">Datos del Usuario</string>
     <string name="texto14">Tienda</string>
     <string name="texto15">Salir</string>
+    <string name="texto16">Productos</string>
+    <string name="texto17">Usuarios</string>
 
     <string name="cb_cliente">Cliente</string>
     <string name="cb_administrador">Administrador</string>

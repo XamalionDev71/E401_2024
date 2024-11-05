@@ -12,6 +12,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import mx.tecnm.cdhidalgo.e401_2024.Adaptadores.AdaptadorArtesania
+import mx.tecnm.cdhidalgo.e401_2024.Adaptadores.AdaptadorBolsos
+import mx.tecnm.cdhidalgo.e401_2024.Adaptadores.AdaptadorPerfumes
+import mx.tecnm.cdhidalgo.e401_2024.Adaptadores.AdaptadorPulseras
 import mx.tecnm.cdhidalgo.e401_2024.Data_Class.Producto
 import mx.tecnm.cdhidalgo.e401_2024.Data_Class.Usuario
 
@@ -30,9 +33,9 @@ class Tienda : AppCompatActivity() {
     private lateinit var listaPulseras: ArrayList<Producto>
 
     private lateinit var adaptadorArtesanias: AdaptadorArtesania
-//    private lateinit var adaptadorPerfumes: AdaptadorPerfumes
-//    private lateinit var adaptadorBolsos: AdaptadorBolsos
-//    private lateinit var adaptadorPulseras: AdaptadorPulseras
+    private lateinit var adaptadorPerfumes: AdaptadorPerfumes
+    private lateinit var adaptadorBolsos: AdaptadorBolsos
+    private lateinit var adaptadorPulseras: AdaptadorPulseras
 
     private lateinit var btnCarrito: Button
     private lateinit var btnSalir: Button
@@ -96,56 +99,56 @@ class Tienda : AppCompatActivity() {
             }
         })
 
-//        //Perfumes
-//        listaPerfumes = listaProductos.filter { it.categoria == "Perfume" } as ArrayList<Producto>
-//        recyclerViewPerfumes.layoutManager = LinearLayoutManager(this,
-//            LinearLayoutManager.HORIZONTAL,false)
-//        adaptadorPerfumes = AdaptadorPerfumes(listaPerfumes)
-//        recyclerViewPerfumes.adapter = adaptadorPerfumes
-//
-//        adaptadorPerfumes.setOnItemClickListener(object : AdaptadorPerfumes.onItemClickListener{
-//            override fun onItemClick(position: Int) {
-//                val intent = Intent(this@Tienda, DetalleProducto::class.java)
-//                intent.putExtra("usuario",_usuario)
-//                intent.putExtra("producto", listaPerfumes[position])
-//                intent.putExtra("indice",position)
-//                startActivity(intent)
-//            }
-//        })
-//
-//        //Bolsos
-//        listaBolsos = listaProductos.filter { it.categoria == "Bolso" } as ArrayList<Producto>
-//        recyclerViewBolsos.layoutManager = LinearLayoutManager(this,
-//            LinearLayoutManager.HORIZONTAL,false)
-//        adaptadorBolsos = AdaptadorBolsos(listaBolsos)
-//        recyclerViewBolsos.adapter = adaptadorBolsos
-//
-//        adaptadorBolsos.setOnItemClickListener(object : AdaptadorBolsos.onItemClickListener{
-//            override fun onItemClick(position: Int) {
-//                val intent = Intent(this@Tienda, DetalleProducto::class.java)
-//                intent.putExtra("usuario",_usuario)
-//                intent.putExtra("producto", listaBolsos[position])
-//                intent.putExtra("indice",position)
-//                startActivity(intent)
-//            }
-//        })
-//
-//        //Pulseras
-//        listaPulseras = listaProductos.filter { it.categoria == "Pulsera" } as ArrayList<Producto>
-//        recyclerViewPulseras.layoutManager = LinearLayoutManager(this,
-//            LinearLayoutManager.HORIZONTAL,false)
-//        adaptadorPulseras = AdaptadorPulseras(listaPulseras)
-//        recyclerViewPulseras.adapter = adaptadorPulseras
-//
-//        adaptadorPulseras.setOnItemClickListener(object : AdaptadorPulseras.onItemClickListener{
-//            override fun onItemClick(position: Int) {
-//                val intent = Intent(this@Tienda, DetalleProducto::class.java)
-//                intent.putExtra("usuario",_usuario)
-//                intent.putExtra("producto", listaPulseras[position])
-//                intent.putExtra("indice",position)
-//                startActivity(intent)
-//            }
-//        })
+        //Perfumes
+        listaPerfumes = listaProductos.filter { it.categoria == "Perfume" } as ArrayList<Producto>
+        recyclerViewPerfumes.layoutManager = LinearLayoutManager(this,
+            LinearLayoutManager.HORIZONTAL,false)
+        adaptadorPerfumes = AdaptadorPerfumes(listaPerfumes)
+        recyclerViewPerfumes.adapter = adaptadorPerfumes
+
+        adaptadorPerfumes.setOnItemClickListener(object : AdaptadorPerfumes.onItemClickListener{
+            override fun onItemClick(position: Int) {
+                val intent = Intent(this@Tienda, DetalleProducto::class.java)
+                intent.putExtra("usuario",_usuario)
+                intent.putExtra("producto", listaPerfumes[position])
+                intent.putExtra("indice",position)
+                startActivity(intent)
+            }
+        })
+
+        //Bolsos
+        listaBolsos = listaProductos.filter { it.categoria == "Bolso" } as ArrayList<Producto>
+        recyclerViewBolsos.layoutManager = LinearLayoutManager(this,
+            LinearLayoutManager.HORIZONTAL,false)
+        adaptadorBolsos = AdaptadorBolsos(listaBolsos)
+        recyclerViewBolsos.adapter = adaptadorBolsos
+
+        adaptadorBolsos.setOnItemClickListener(object : AdaptadorBolsos.onItemClickListener{
+            override fun onItemClick(position: Int) {
+                val intent = Intent(this@Tienda, DetalleProducto::class.java)
+                intent.putExtra("usuario",_usuario)
+                intent.putExtra("producto", listaBolsos[position])
+                intent.putExtra("indice",position)
+                startActivity(intent)
+            }
+        })
+
+        //Pulseras
+        listaPulseras = listaProductos.filter { it.categoria == "Pulsera" } as ArrayList<Producto>
+        recyclerViewPulseras.layoutManager = LinearLayoutManager(this,
+            LinearLayoutManager.HORIZONTAL,false)
+        adaptadorPulseras = AdaptadorPulseras(listaPulseras)
+        recyclerViewPulseras.adapter = adaptadorPulseras
+
+        adaptadorPulseras.setOnItemClickListener(object : AdaptadorPulseras.onItemClickListener{
+            override fun onItemClick(position: Int) {
+                val intent = Intent(this@Tienda, DetalleProducto::class.java)
+                intent.putExtra("usuario",_usuario)
+                intent.putExtra("producto", listaPulseras[position])
+                intent.putExtra("indice",position)
+                startActivity(intent)
+            }
+        })
 
         btnCarrito.setOnClickListener {
             val intent = Intent(this,Carrito::class.java)
@@ -155,7 +158,8 @@ class Tienda : AppCompatActivity() {
         }
 
         btnSalir.setOnClickListener {
-            val intent = Intent(this,Login::class.java)
+            val intent = Intent(this,Menu::class.java)
+            intent.putExtra("usuario",_usuario)
             startActivity(intent)
         }
     }

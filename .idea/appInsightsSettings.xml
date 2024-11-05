@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="mx.tecnm.cdhidalgo.e401_2024" />
-                  <option name="mobileSdkAppId" value="1:32680724976:android:62ad6f9239b183af8ab535" />
-                  <option name="projectId" value="tiendae4012024" />
-                  <option name="projectNumber" value="32680724976" />
+                  <option name="mobileSdkAppId" value="1:686968380083:android:3aedcfa75a2bd5620d6ec6" />
+                  <option name="projectId" value="gift-store-6132e" />
+                  <option name="projectNumber" value="686968380083" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

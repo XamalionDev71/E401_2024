@@ -34,7 +34,7 @@ class Menu : AppCompatActivity() {
 
          val _usuario = intent.getParcelableExtra<Usuario>("usuario")
 
-        nombreCliente.text = "Usuario: ${_usuario?.nombre.toString()} " +
+        nombreCliente.text = "Cliente: ${_usuario?.nombre.toString()} " +
                 "${_usuario?.apaterno.toString()} ${_usuario?.amaterno.toString()}"
 
         btnTienda.setOnClickListener {
