@@ -38,7 +38,9 @@ class Menu : AppCompatActivity() {
                 "${_usuario?.apaterno.toString()} ${_usuario?.amaterno.toString()}"
 
         btnTienda.setOnClickListener {
-
+            val intent = Intent(this, Tienda::class.java)
+            intent.putExtra("usuario",_usuario)
+            startActivity(intent)
         }
 
         btnSalir.setOnClickListener {

@@ -84,11 +84,13 @@ class AdminAgregarProducto : AppCompatActivity() {
             //Aseguramos que exista una imagen seleccionada
             if (selectedImageUri != null) {
                 //Guardamos la imagen en Firebase Storage
+                Toast.makeText(this, "Estoy dentro del IF", Toast.LENGTH_SHORT).show()
                 val storageRef =
                     storageReference.child("productos/${selectedImageUri?.lastPathSegment}")
                 storageRef.putFile(selectedImageUri!!)
                     .addOnSuccessListener {
                         //busca el url de la imagen después de ser subida
+                        Toast.makeText(this, "${storageRef.downloadUrl}", Toast.LENGTH_SHORT).show()
                         storageRef.downloadUrl.addOnSuccessListener { uri ->
                             val downloadUrl = uri.toString()
                             Toast.makeText(this, "$downloadUrl", Toast.LENGTH_SHORT).show()

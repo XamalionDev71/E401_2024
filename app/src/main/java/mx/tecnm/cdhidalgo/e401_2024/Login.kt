@@ -11,6 +11,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.appcheck.BuildConfig
+import com.google.firebase.appcheck.FirebaseAppCheck
+import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.toObject
@@ -47,6 +50,18 @@ class Login : AppCompatActivity() {
 
         //inicializar autenticacion
         auth = FirebaseAuth.getInstance()
+
+        val firebaseAppCheck = FirebaseAppCheck.getInstance()
+
+//        FirebaseAppCheck.getInstance().installAppCheckProviderFactory(
+//            PlayIntegrityAppCheckProviderFactory.getInstance()
+//        )
+
+//        if (BuildConfig.DEBUG) {
+//            firebaseAppCheck.installAppCheckProviderFactory(com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory.getInstance())
+//        } else {
+//            firebaseAppCheck.installAppCheckProviderFactory(com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory.getInstance())
+//        }
 
         correo = findViewById(R.id.txtCorreo)
         password = findViewById(R.id.txtPass)
