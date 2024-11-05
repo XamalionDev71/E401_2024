@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="mx.tecnm.cdhidalgo.e401_2024" />
-                  <option name="mobileSdkAppId" value="1:32680724976:android:62ad6f9239b183af8ab535" />
-                  <option name="projectId" value="tiendae4012024" />
-                  <option name="projectNumber" value="32680724976" />
+                  <option name="appId" value="PLACEHOLDER" />
+                  <option name="mobileSdkAppId" value="" />
+                  <option name="projectId" value="" />
+                  <option name="projectNumber" value="" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
