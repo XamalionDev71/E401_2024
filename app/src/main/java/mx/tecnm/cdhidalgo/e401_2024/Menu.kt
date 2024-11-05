@@ -16,8 +16,6 @@ class Menu : AppCompatActivity() {
     private lateinit var btnTienda: Button
     private lateinit var btnSalir: Button
 
-    private lateinit var auth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,7 +26,7 @@ class Menu : AppCompatActivity() {
             insets
         }
 
-        auth = FirebaseAuth.getInstance()
+        val auth = FirebaseAuth.getInstance()
 
         nombreCliente = findViewById(R.id.txtUsuario)
         btnTienda = findViewById(R.id.btnTienda)

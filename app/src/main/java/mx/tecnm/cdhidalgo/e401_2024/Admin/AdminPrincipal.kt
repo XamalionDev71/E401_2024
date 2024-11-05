@@ -22,10 +22,8 @@ class AdminPrincipal : AppCompatActivity() {
     private lateinit var rvProductos: RecyclerView
     private lateinit var btnAgregarProd: ImageButton
     private lateinit var btnSalir: Button
-    private lateinit var auth: FirebaseAuth
-    private var firestoreListener: ListenerRegistration? = null
 
-    val baseDeDatos = Firebase.firestore
+    val auth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,8 +39,6 @@ class AdminPrincipal : AppCompatActivity() {
         btnSalir = findViewById(R.id.btnSalir_Principal)
 
         val usuario = intent.getParcelableExtra<Usuario>("usuario")
-
-
 
         btnAgregarProd.setOnClickListener {
             val intent = Intent(this, AdminAgregarProducto::class.java)
