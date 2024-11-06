@@ -14,17 +14,15 @@
         android:id="@+id/iv_logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-250dp"
+        android:layout_marginTop="150dp"
         android:scaleType="centerInside"
-        android:scaleX=".4"
-        android:scaleY=".4"
         android:src="@drawable/logo_giftstore_150"/>
 
     <TextView
         android:id="@+id/tv_texto01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-250dp"
+        android:layout_marginTop="50dp"
         android:textAlignment="center"
         android:text="Agradece su compra"
         android:textColor="#c42217"
