@@ -30,6 +30,8 @@ import mx.tecnm.cdhidalgo.e401_2024.Admin.AdminPrincipal
 import mx.tecnm.cdhidalgo.e401_2024.Data_Class.Producto
 import mx.tecnm.cdhidalgo.e401_2024.Data_Class.Usuario
 
+//Comentario
+
 var listaProductos = ArrayList<Producto>()
 var miCarrito = ArrayList<Producto>()
 var misCompras = ArrayList<Producto>()
