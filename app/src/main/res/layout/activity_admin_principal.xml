@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+    android:layout_margin="20dp"
     tools:context=".Admin.AdminPrincipal">
 
     <FrameLayout
@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content">
 
                     <Button
-                        android:id="@+id/btnSalir"
+                        android:id="@+id/btnSalir_Principal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#0091EA"
@@ -47,7 +47,6 @@
                         android:layout_height="wrap_content"
                         android:text="@string/app_name"
                         style="@style/Titulo02"/>
-
                 </TableRow>
             </TableLayout>
 
@@ -66,9 +65,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
                 tools:listitem="@layout/card_producto2"/>
-
         </LinearLayout>
-
     </FrameLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -79,5 +76,4 @@
         android:layout_gravity="bottom|end"
         android:backgroundTint="@color/rojo_c3"
         android:src="@drawable/img_add" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

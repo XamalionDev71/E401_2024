@@ -1,26 +1,65 @@
 {
   "project_info": {
-    "project_number": "32680724976",
-    "project_id": "tiendae4012024",
-    "storage_bucket": "tiendae4012024.appspot.com"
+    "project_number": "686968380083",
+    "project_id": "gift-store-6132e",
+    "storage_bucket": "gift-store-6132e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:32680724976:android:62ad6f9239b183af8ab535",
+        "mobilesdk_app_id": "1:686968380083:android:3aedcfa75a2bd5620d6ec6",
         "android_client_info": {
           "package_name": "mx.tecnm.cdhidalgo.e401_2024"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "686968380083-dggvnv8t9ovi98m26dkmtk38v54qup39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCSUgY8JcAR8SQOAWbrD84hqI3kB8nyLUY"
+          "current_key": "AIzaSyD4UNgajxwAazrBBMsRoYw-xcsoSKJ6KKU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686968380083-dggvnv8t9ovi98m26dkmtk38v54qup39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686968380083:android:a46724b56bee29140d6ec6",
+        "android_client_info": {
+          "package_name": "mx.tecnm.cdhidalgo.giftstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686968380083-dggvnv8t9ovi98m26dkmtk38v54qup39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4UNgajxwAazrBBMsRoYw-xcsoSKJ6KKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686968380083-dggvnv8t9ovi98m26dkmtk38v54qup39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
