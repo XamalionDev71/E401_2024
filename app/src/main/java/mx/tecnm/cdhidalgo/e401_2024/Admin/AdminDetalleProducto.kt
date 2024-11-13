@@ -22,6 +22,8 @@ class AdminDetalleProducto : AppCompatActivity() {
     private lateinit var _precio: TextView
     private lateinit var btnRegresar: ImageButton
 
+    //Comentario
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
